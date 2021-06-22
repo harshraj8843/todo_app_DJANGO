@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <title>Todo App</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row mt-5 mb-3">
+            <div class="col-6">
+                <button class="btn btn-success disabled" type="button" style="width: 100%;">TO DO</button>
+            </div>
+            <div class="col-6">
+                <a href="{% url 'done' %}">
+                    <button class="btn btn-danger" type="button" style="width: 100%;">DONE</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="row mt-4 mb-5">
+            <div class="col-12">
+                <a href="{% url 'create' %}">
+                    <button class="btn btn-primary" type="button" style="width: 100%;">ADD TO DO</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">S. No.</th>
+                            <th scope="col" class="text-center">Name</th>
+                            <th scope="col" class="text-center">Last Date</th>
+                            <th scope="col" class="text-center">Mark as Done !</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in datas %}
+                        <tr>
+                            <th scope="row" class="text-center">{{forloop.counter}}</th>
+                            <td class="text-center">{{data.name}}</td>
+                            <td class="text-center">{{data.last_date}}</td>
+                            <td class="text-center">
+                                <a href="{% url 'mark_done' data.id %}">
+                                    <button class="btn btn-success btn-sm">done</button>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>

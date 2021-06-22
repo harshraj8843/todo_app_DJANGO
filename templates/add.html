@@ -1,0 +1,67 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <title>Todo App</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row my-5">
+            <div class="col-6">
+                <a href="{% url 'home' %}">
+                    <button class="btn btn-success" type="button" style="width: 100%;">TO DO</button>
+                </a>
+                
+            </div>
+            <div class="col-6">
+                <a href="{% url 'done' %}">
+                    <button class="btn btn-danger" type="button" style="width: 100%;">DONE</button>
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h2><u>Add a TODO</u></h2>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <form method="POST" action="/create/">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">TODO Name</label>
+                        <input placeholder="Enter name of todo" type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="date" class="form-label">LAST DATE</label>
+                        <input placeholder="Enter the last date to complete" type="date" class="form-control" id="date" name="date" aria-describedby="dateHelp">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>
