@@ -7,6 +7,8 @@
 
 <div align="center">
 
+[![Demo](https://img.shields.io/badge/Demo-LIVE-blue)](https://neukcodedemo.pythonanywhere.com/todo/)
+
 [![GitHub Issues](https://img.shields.io/github/issues/neukcode/todo_app_DJANGO)](https://github.com/neukcode/todo_app_DJANGO/issues) [![GitHub Forks](https://img.shields.io/github/forks/neukcode/todo_app_DJANGO)](https://github.com/neukcode/todo_app_DJANGO/network/members) [![GitHub Stars](https://img.shields.io/github/stars/neukcode/todo_app_DJANGO)](https://github.com/neukcode/todo_app_DJANGO/stargazers) [![License](https://img.shields.io/github/license/neukcode/todo_app_DJANGO)](https://github.com/neukcode/todo_app_DJANGO/blob/master/LICENSE.md)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/neukcode?style=social&label=Follow)](https://twitter.com/neukcode?ref_src=twsrc%5Etfw) [![Twitter Mention](https://img.shields.io/twitter/url?label=%40Mention&style=social&url=https://twitter.com/neukcode)](https://twitter.com/intent/tweet?screen_name=neukcode&ref_src=twsrc%5Etfw)
