@@ -19,9 +19,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+
+    # admin path
     path('admin/', admin.site.urls),
 
+    # main app path
     path('', include('main.urls')),
 ]
 
+# configuring path for static and media
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
