@@ -1,4 +1,6 @@
+<!-- load static -->
 {% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -10,6 +12,7 @@
     <!-- Bootstrap CSS -->
     <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
 
+    <!-- title -->
     <title>Todo App</title>
 </head>
 
@@ -48,6 +51,8 @@
                         </tr>
                     </thead>
                     <tbody>
+                        
+                        <!-- list of all done data -->
                         {% for data in datas %}
                         <tr>
                             <td class="text-center"><del>{{data.name}}</del></td>
@@ -62,10 +67,7 @@
             </div>
         </div>
 
-
-
     </div>
-
 
     <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
 </body>
