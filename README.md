@@ -20,7 +20,7 @@ A simple Todo App in Django
 
 - clone project
   ```
-  git clone https://github.com/novicexp/todo_app_DJANGO
+  git clone https://github.com/harshraj8843/todo_app_DJANGO
   ```
   ```
   cd todo_app_DJANGO/
@@ -41,4 +41,3 @@ A simple Todo App in Django
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [DJANGO](https://www.djangoproject.com/) - Backend Framework
-- [HTML Template](https://github.com/novicexp/todo-app-html-template) - Frontend
